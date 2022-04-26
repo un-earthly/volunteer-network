@@ -7,7 +7,7 @@ export default function Login() {
   const [signInWithGoogle, user] = useSignInWithGoogle(auth)
   const navigate = useNavigate()
   if (user) {
-    navigate('/')
+    navigate('/register')
   }
   return (
     <div className="bg-[#E5E5E5] flex items-center justify-center flex-col p-10">

@@ -16,15 +16,14 @@ export default function Header() {
                 <NavLink className='mx-1 rounded font-semibold hover:bg-[#3F90FC] hover:text-white duration-500 px-8 py-2' to='/blog'>Blog</NavLink>
                 {
                     user ? <>
-                        <Link to='/admin'><Button btnText='Admin' customClassName='bg-gray-800' /></Link>
-                        <Button btnText='Sign Out' handler={() => signOut(auth)} customClassName='bg-gray-800' />
+                        <Button btnText='Sign Out' handler={() => signOut(auth)} customClassName='bg-gray-800 mx-1 rounded-md' />
                     </>
                         :
                         <>
                             <Link to='/login'>
-                                <Button customClassName='bg-[#3F90FC] hover:border-[#3F90FC] hover:text-[#3F90FC]' btnText='Login' />
+                                <Button customClassName='bg-[#3F90FC] mx-1 rounded-md hover:border-[#3F90FC] hover:text-[#3F90FC]' btnText='Login' />
                             </Link>
-                            <Link to='/register'><Button customClassName='bg-gray-800' btnText='Register' /></Link>
+                            <Link to='/register'><Button customClassName='bg-gray-800 mx-1 rounded-md' btnText='Admin' /></Link>
                         </>
                 }
             </ul>

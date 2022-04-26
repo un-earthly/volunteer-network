@@ -22,7 +22,7 @@ function App() {
         <Route element={<RegisterVolunteer />} path='/register-volunteer' />
         <Route element={<Blogs />} path='/blog' />
         <Route element={<Login />} path='/login' />
-        <Route element={<Register />} path='/register' />
+        <Route element={<PrivetRoute><Register /></PrivetRoute>} path='/register' />
         <Route element={<PrivetRoute><Admin /></PrivetRoute>} path='/admin' />
       </Routes>
     </div>
