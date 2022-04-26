@@ -14,9 +14,16 @@ async function run() {
     try {
         client.connect()
         const volunteerCollection = client.db("volunteerDB").collection("volunteer");
-
+        // serve and search api 
         app.get('/works', async (req, res) => {
-            const works = await volunteerCollection.find().toArray()
+            const query = req.query.work
+            let works;
+            if (query) {
+                works = await volunteerCollection.find({ title: req.query.work }).toArray()
+            }
+            else {
+                works = await volunteerCollection.find().toArray()
+            }
             res.send(works)
         })
 
