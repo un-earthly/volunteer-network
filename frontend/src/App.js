@@ -8,7 +8,6 @@ import Blogs from './Pages/Blogs.js'
 import Admin from './Pages/Admin.js'
 import Login from './Pages/Login.js'
 import Register from './Pages/Register.js'
-import RegisterVolunteer from './Pages/RegisterVolunteer.js'
 function App() {
 
   return (
@@ -19,10 +18,9 @@ function App() {
         <Route element={<PrivetRoute><Donation /></PrivetRoute>} path='/donation' />
         <Route element={<Events />} path='/events' />
         <Route element={<AddEvents />} path='/addevents' />
-        <Route element={<RegisterVolunteer />} path='/register-volunteer' />
         <Route element={<Blogs />} path='/blog' />
         <Route element={<Login />} path='/login' />
-        <Route element={<PrivetRoute><Register /></PrivetRoute>} path='/register' />
+        <Route element={<Register />} path='/register' />
         <Route element={<PrivetRoute><Admin /></PrivetRoute>} path='/admin' />
       </Routes>
     </div>

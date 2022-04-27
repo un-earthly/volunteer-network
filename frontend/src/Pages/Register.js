@@ -21,20 +21,20 @@ export default function Register() {
     e.target.reset()
   }
   return (
-    <div className="bg-[#E5E5E5] flex items-center justify-center flex-col p-10">
+    <div className="bg-[#E5E5E5] flex items-center justify-center flex-col pb-10">
       <Link to='/'><img src="logo192.png" className='block mx-auto' alt="" /></Link>
-      <div className="h-96 py-64 mt-20 bg-white border-2 border-[#ABABAB] flex items-center justify-center flex-col w-1/2">
-        <h2 className="text-3xl font-semibold my-3">Login With</h2>
-        <form className='flex items-center justify-center flex-col w-full' onSubmit={handleRegister}>
-          <input className='p-4 w-2/4 bg-gray-400 my-1' type="text" value={user?.displayName} readOnly disabled />
-          <input className='p-4 w-2/4 bg-gray-400 my-1' type="email" value={user?.email} readOnly disabled />
-          <input className='p-4 w-2/4 bg-gray-400 my-1' type="date" name='date' />
-          <input className='p-4 w-2/4 bg-gray-400 my-1' type="text" name='desc' placeholder='describe your self' />
-          <input className='p-4 w-2/4 bg-gray-400 my-1' type="text" name='role' />
-          <Button btnText='submit' customClassName='bg-gray-800' />
+      <div className="pt-10 mt-14 bg-white border-2 border-[#ABABAB] flex items-center justify-center flex-col w-1/2 rounded-lg">
+        <h2 className="text-3xl text-left font-semibold">Register volunteer</h2>
+        <form className='flex items-center justify-center flex-col w-full p-14 space-y-5' onSubmit={handleRegister}>
+          <input className='px-4 py-2 bg-red-50 border-b w-full outline-none border-b-[#C5C5C5]' type="text" value={user?.displayName} readOnly disabled />
+          <input className='px-4 py-2 bg-red-50 border-b w-full outline-none border-b-[#C5C5C5]' type="email" value={user?.email} readOnly disabled />
+          <input className='px-4 py-2 border-b w-full outline-none border-b-[#C5C5C5]' type="date" name='date' />
+          <input className='px-4 py-2 border-b w-full outline-none border-b-[#C5C5C5]' type="text" name='desc' placeholder='describe your self' />
+          <input className='px-4 py-2 border-b w-full outline-none border-b-[#C5C5C5]' type="text" name='role' placeholder='Your Desired Role' />
+          <Button btnText='Register' customClassName='bg-gray-800 w-full ' />
         </form>
 
       </div>
-    </div>
+    </div >
   )
 }

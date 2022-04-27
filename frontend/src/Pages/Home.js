@@ -2,11 +2,11 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import useWorks from '../Hooks/useWorks'
 import Button from '../Utils&Shared/Button'
+import Card from '../Utils&Shared/Card'
 import Header from '../Utils&Shared/Header'
 
 
 export default function Home() {
-    // const [works, setWorks] = useWorks()
     const [works, setWorks] = useState([])
 
     useEffect(() => {
@@ -51,9 +51,9 @@ export default function Home() {
             </div>
 
 
-            <div>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mt-10 p-4'>
                 {
-                    works.map(work => <p>{work.title} </p>)
+                    works.map(work => <Card key={work._id} img={work.img} title={work.title} />)
                 }
             </div>
         </>
