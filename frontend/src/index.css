@@ -4,8 +4,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 .active {
-    background: #3F90FC;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 3px;
+    color: #3F90FC;
 }

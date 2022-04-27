@@ -20,7 +20,7 @@ function App() {
         <Route element={<AddEvents />} path='/addevents' />
         <Route element={<Blogs />} path='/blog' />
         <Route element={<Login />} path='/login' />
-        <Route element={<Register />} path='/register' />
+        <Route element={<PrivetRoute><Register /></PrivetRoute>} path='/register' />
         <Route element={<PrivetRoute><Admin /></PrivetRoute>} path='/admin' />
       </Routes>
     </div>

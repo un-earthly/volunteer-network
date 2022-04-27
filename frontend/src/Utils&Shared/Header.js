@@ -10,10 +10,10 @@ export default function Header() {
         <nav className='flex items-center justify-between container mx-auto p-5 sticky top-0 backdrop-blur-sm z-50'>
             <Link to='/'><img src="logo192.png" alt="" /></Link>
             <ul className='flex items-center justify-center'>
-                <NavLink className='mx-1 rounded font-semibold hover:bg-[#3F90FC] hover:text-white duration-500 px-8 py-2' to='/'>Home</NavLink>
-                <NavLink className='mx-1 rounded font-semibold hover:bg-[#3F90FC] hover:text-white duration-500 px-8 py-2' to='/donation'>Donation</NavLink>
-                <NavLink className='mx-1 rounded font-semibold hover:bg-[#3F90FC] hover:text-white duration-500 px-8 py-2' to='/events'>Events</NavLink>
-                <NavLink className='mx-1 rounded font-semibold hover:bg-[#3F90FC] hover:text-white duration-500 px-8 py-2' to='/blog'>Blog</NavLink>
+                <NavLink className='mx-1 rounded font-semibold hover:text-[#3F90FC] duration-500 px-4 py-2' to='/'>Home</NavLink>
+                <NavLink className='mx-1 rounded font-semibold hover:text-[#3F90FC] duration-500 px-4 py-2' to='/donation'>Donation</NavLink>
+                <NavLink className='mx-1 rounded font-semibold hover:text-[#3F90FC] duration-500 px-4 py-2' to='/events'>Events</NavLink>
+                <NavLink className='mx-1 rounded font-semibold hover:text-[#3F90FC] duration-500 px-4 py-2' to='/blog'>Blog</NavLink>
                 {
                     user ? <>
                         <Button btnText='Sign Out' handler={() => signOut(auth)} customClassName='bg-gray-800 mx-1 rounded-md' />
@@ -25,7 +25,7 @@ export default function Header() {
                             </Link>
                         </>
                 }
-                <Link to='/register'><Button customClassName='bg-gray-800 mx-1 rounded-md' btnText='Admin' /></Link>
+                <Link to='/admin'><Button customClassName='bg-gray-800 mx-1 rounded-md' btnText='Admin' /></Link>
             </ul>
 
 
