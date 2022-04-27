@@ -13,7 +13,7 @@ export default function AddEvents() {
       date: e.target.date.value,
       img: e.target.img.value,
     }
-    axios.post('http://localhost/event', data)
+    axios.post('https://glacial-waters-98342.herokuapp.com/event', data)
     e.target.reset()
     navigate('/events')
   }

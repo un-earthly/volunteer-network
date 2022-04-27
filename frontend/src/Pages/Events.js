@@ -7,7 +7,7 @@ import SingleEvent from '../Utils&Shared/SingleEvent'
 export default function Events() {
     const [events, setEvents] = useState([])
     useEffect(() => {
-        axios.get('http://localhost/event')
+        axios.get('https://glacial-waters-98342.herokuapp.com/event')
             .then(data => setEvents(data.data))
     }, [])
     const handler = id => {

@@ -10,7 +10,7 @@ export default function Home() {
     const [works, setWorks] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost/works')
+        axios.get('https://glacial-waters-98342.herokuapp.com/works')
             .then(function (response) {
                 // handle success
                 setWorks(response.data);
@@ -20,7 +20,7 @@ export default function Home() {
         e.preventDefault()
         const query = e.target.searchtext.value
         if (query.length > 0) {
-            axios.get(`http://localhost/works?work=${query}`)
+            axios.get(`https://glacial-waters-98342.herokuapp.com/works?work=${query}`)
                 .then(res => setWorks(res.data))
 
         }

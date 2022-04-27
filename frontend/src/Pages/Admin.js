@@ -8,11 +8,11 @@ import TableData from '../Utils&Shared/TableData'
 export default function Admin() {
     const [volunteerData, setVolunteerData] = useState([])
     useEffect(() => {
-        axios.get('http://localhost/volunteer')
+        axios.get('https://glacial-waters-98342.herokuapp.com/volunteer')
             .then(res => setVolunteerData(res.data))
     }, [])
     const handleDelete = id => {
-        axios.post(`http://localhost/volunteer/${id}`)
+        axios.post(`https://glacial-waters-98342.herokuapp.com/volunteer/${id}`)
         setVolunteerData(volunteerData.filter(currentId => currentId._id !== id))
     }
     return (

@@ -20,7 +20,7 @@ export default function Register() {
       desc: e.target.desc.value,
       role: e.target.role.value
     }
-    axios.post('http://localhost/volunteer', data)
+    axios.post('https://glacial-waters-98342.herokuapp.com/volunteer', data)
       .then(res => alert(`successFully Added with id: ${res.data.insertedId}`))
     e.target.reset()
     navigate('/admin')
