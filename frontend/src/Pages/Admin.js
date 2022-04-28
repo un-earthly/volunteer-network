@@ -11,19 +11,22 @@ export default function Admin() {
             .then(res => setVolunteerData(res.data))
     }, [])
     const handleDelete = id => {
-        axios.post(`https://glacial-waters-98342.herokuapp.com/volunteer/${id}`)
-        setVolunteerData(volunteerData.filter(currentId => currentId._id !== id))
+        const confirm = window.confirm('Are You Sure?')
+        if (confirm) {
+            axios.post(`https://glacial-waters-98342.herokuapp.com/volunteer/${id}`)
+            setVolunteerData(volunteerData.filter(currentId => currentId._id !== id))
+        }
     }
     return (
-        <div className='flex md:flex-row flex-col bg-gray-300'>
+        <div className='flex md:flex-row flex-col md:bg-gray-300'>
             <Sidebar />
 
             <div className='flex-grow'>
                 <h1 className='bg-white text-2xl p-4'>Volunteer Register List</h1>
                 <div className='bg-white rounded-3xl m-4  flex-grow shadow-md sm:rounded-lg pt-4 pb-10'>
                     <div className="relative p-3">
-                        <table className="w-full text-sm text-left text-gray-500 ">
-                            <thead className="text-xs text-gray-700 uppercase  bg-gray-100">
+                        <table className="w-full text-sm text-left text-gray-500 overflow-x-auto ">
+                            <thead className="text-xs text-gray-700 uppercase md:bg-gray-100">
                                 <tr>
                                     <th scope="col" className="px-6 py-3">
                                         Name

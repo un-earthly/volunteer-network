@@ -18,7 +18,7 @@ export default function AddEvents() {
     navigate('/events')
   }
   return (
-    <div className='flex bg-gray-300 md:flex-row flex-col'>
+    <div className='flex md:bg-gray-300 md:flex-row flex-col'>
       <Sidebar />
       <div className='flex-grow'>
 
