@@ -22,7 +22,7 @@ export default function AddEvents() {
       <Sidebar />
       <div className='flex-grow'>
 
-        <h1 className='bg-white text-2xl p-4'>Volunteer Register List</h1>
+        <h1 className='bg-white text-2xl p-4'>Add An Event</h1>
         <form onSubmit={handleAddEvent} className="  m-4 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white p-6 rounded-xl mt-10">
             <div className="flex flex-col">
@@ -38,7 +38,7 @@ export default function AddEvents() {
               <textarea className='border-[#C9C9C9] border  rounded-sm px-3 py-2 outline-none' type="text" id='eventDesc' name='eventDesc' placeholder='Event Description Here...' />
             </div>
             <div className="flex flex-col">
-              <label htmlFor="img">Event Title </label>
+              <label htmlFor="img">Event Image URL </label>
               <input className='border-[#C9C9C9] border  rounded-sm px-3 py-2 outline-none' type="type" id='img' name='img' placeholder='Event Img Url Here...' />
             </div>
           </div>
