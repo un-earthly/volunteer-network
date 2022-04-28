@@ -22,7 +22,7 @@ export default function Events() {
     return (
         <div className=''>
             <Header />
-            <div className='p-14'>
+            <div className='md:p-14'>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {
                         events.map(eve => {

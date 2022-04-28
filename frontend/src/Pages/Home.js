@@ -35,8 +35,8 @@ export default function Home() {
             <Header />
             <div className='mt-20'>
                 <h1 className="md:text-4xl font-bold uppercase font-[Montserrat] text-center">I grow by helping people in need.</h1>
-                <form onSubmit={handleSearch} className='flex items-center justify-end md:w-1/4 w-3/4 mx-auto border rounded-lg border-[#D6D6D6] mt-7'>
-                    <input type="text" name='searchtext' placeholder='Search...' className='rounded-l-lg mx-auto md:px-5 py-2 flex-grow outline-none ' />
+                <form onSubmit={handleSearch} className=' items-center justify-end md:w-1/4 w-3/4 mx-auto border rounded-lg border-[#D6D6D6] mt-7 hidden md:flex'>
+                    <input type="text" name='searchtext' placeholder='Search...' className='rounded-l-lg mx-auto px-5 py-2 flex-grow outline-none' />
                     <Button btnText='Search' customClassName='
                      hover:text-white m-0 bg-gray-800 mx-0 md:px-5 text-white py-2 border rounded-none rounded-r-lg' />
                 </form>
