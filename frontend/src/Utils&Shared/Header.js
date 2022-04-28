@@ -31,7 +31,7 @@ export default function Header() {
 
         </nav>
 
-        <nav>
+        <nav className='md:hidden'>
             <div className='flex justify-around items-center'>
 
                 <Link to='/'><img src="logo192.png" className='w-3/4' alt="" /></Link>
